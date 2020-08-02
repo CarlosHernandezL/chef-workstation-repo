@@ -154,10 +154,45 @@ end
 
 execute 'generate logstash.service file for systemd' do
   command '/usr/share/logstash/bin/system-install /etc/logstash/startup.options systemd'
-#  action :nothing
 end
 
-execute 'start logstash' do
+execute 'start_logstash' do
   command 'systemctl start logstash.service'
-#  action :nothing
+end
+
+chef_gem 'chef-vault' do
+  compile_time true if respond_to?(:compile_time)
+end
+
+require 'chef-vault'
+
+item = ChefVault::Item.load('api_weather', 'appid')
+
+execute 'create keystore on logstash' do
+  command "echo 'y' | /usr/share/logstash/bin/logstash-keystore --path.settings /etc/logstash create -x"
+end
+
+execute 'add key to logstash' do
+  command "echo #{item['key']} | /usr/share/logstash/bin/logstash-keystore --path.settings /etc/logstash add API_KEY -x"
+end
+
+template "#{node['logstash']['root']}conf.d/weather.conf" do
+  source 'weather.conf.erb'
+  owner 'root'
+  group 'logstash'
+  mode '0750'
+end
+
+template '/tmp/dashboard.json' do
+  source 'dashboard.json.erb'
+  owner 'root'
+  group 'root'
+  mode '0644'
+end
+
+http_request 'posting_dashboard_to_kibana' do
+  action :post
+  url 'http://localhost:5601/api/kibana/dashboards/import'
+  message lazy { IO.read('/tmp/dashboard.json') }
+  headers ({ 'kbn-xsrf' => 'reporting', 'Content-Type' => 'application/json' })
 end

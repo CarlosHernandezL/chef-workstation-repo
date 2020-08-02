@@ -1,11 +1,11 @@
 name 'elk'
 maintainer 'Carlos Hernandez'
-maintainer_email 'cahl1@softtek.com'
+maintainer_email 'carlos-1893ahl@hotmail.com'
 supports 'centos'
 license 'Apache-2.0'
 description 'Installs/Configures elk'
 long_description 'Installs/Configures elk'
-version '0.3.1'
+version '0.4.1'
 chef_version '>= 14.0'
 
 # The `issues_url` points to the location where issues for this cookbook are

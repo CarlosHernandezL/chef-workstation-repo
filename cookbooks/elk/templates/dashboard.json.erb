@@ -1,0 +1,291 @@
+{
+  "version": "7.8.0",
+  "objects": [
+    {
+      "id": "3a67d440-b39a-11ea-a130-574592179c4c",
+      "type": "dashboard",
+      "updated_at": "2020-06-21T10:19:58.777Z",
+      "version": "WzMwMywxXQ==",
+      "attributes": {
+        "title": "weather_monitoring",
+        "hits": 0,
+        "description": "",
+        "panelsJSON": "[{\"version\":\"7.8.0\",\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":15,\"i\":\"73c2b614-15bf-4ffb-9e2b-16ce206127dd\"},\"panelIndex\":\"73c2b614-15bf-4ffb-9e2b-16ce206127dd\",\"embeddableConfig\":{},\"panelRefName\":\"panel_0\"},{\"version\":\"7.8.0\",\"gridData\":{\"x\":24,\"y\":0,\"w\":24,\"h\":15,\"i\":\"e753d698-65fb-4017-a0ed-bff3490c22d4\"},\"panelIndex\":\"e753d698-65fb-4017-a0ed-bff3490c22d4\",\"embeddableConfig\":{},\"panelRefName\":\"panel_1\"},{\"version\":\"7.8.0\",\"gridData\":{\"x\":0,\"y\":15,\"w\":24,\"h\":15,\"i\":\"0ee05e1b-3629-45eb-bb7d-2108355b5157\"},\"panelIndex\":\"0ee05e1b-3629-45eb-bb7d-2108355b5157\",\"embeddableConfig\":{},\"panelRefName\":\"panel_2\"},{\"version\":\"7.8.0\",\"gridData\":{\"x\":24,\"y\":15,\"w\":24,\"h\":15,\"i\":\"276acb31-734c-4851-87d0-fdd04dd3d44f\"},\"panelIndex\":\"276acb31-734c-4851-87d0-fdd04dd3d44f\",\"embeddableConfig\":{},\"panelRefName\":\"panel_3\"},{\"version\":\"7.8.0\",\"gridData\":{\"x\":0,\"y\":30,\"w\":24,\"h\":15,\"i\":\"c1e9e50a-5d60-4db9-bdf4-0b46e8687bbd\"},\"panelIndex\":\"c1e9e50a-5d60-4db9-bdf4-0b46e8687bbd\",\"embeddableConfig\":{},\"panelRefName\":\"panel_4\"},{\"version\":\"7.8.0\",\"gridData\":{\"x\":24,\"y\":30,\"w\":24,\"h\":15,\"i\":\"d9767302-6ae5-44b1-850b-c29b6fd2cfb6\"},\"panelIndex\":\"d9767302-6ae5-44b1-850b-c29b6fd2cfb6\",\"embeddableConfig\":{\"vis\":null},\"panelRefName\":\"panel_5\"},{\"version\":\"7.8.0\",\"gridData\":{\"x\":0,\"y\":45,\"w\":24,\"h\":15,\"i\":\"8f46911f-bbf5-49f5-8997-23356e47f1ff\"},\"panelIndex\":\"8f46911f-bbf5-49f5-8997-23356e47f1ff\",\"embeddableConfig\":{\"vis\":null},\"panelRefName\":\"panel_6\"},{\"version\":\"7.8.0\",\"gridData\":{\"x\":24,\"y\":45,\"w\":24,\"h\":15,\"i\":\"4836e0c2-b8d6-495e-a244-3b90836eb28f\"},\"panelIndex\":\"4836e0c2-b8d6-495e-a244-3b90836eb28f\",\"embeddableConfig\":{},\"panelRefName\":\"panel_7\"}]",
+        "optionsJSON": "{\"hidePanelTitles\":true,\"useMargins\":true}",
+        "version": 1,
+        "timeRestore": false,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+        }
+      },
+      "references": [
+        {
+          "name": "panel_0",
+          "type": "visualization",
+          "id": "d2d2c480-b3a7-11ea-a130-574592179c4c"
+        },
+        {
+          "name": "panel_1",
+          "type": "visualization",
+          "id": "e1114df0-b398-11ea-a130-574592179c4c"
+        },
+        {
+          "name": "panel_2",
+          "type": "visualization",
+          "id": "c9025350-b3a5-11ea-a130-574592179c4c"
+        },
+        {
+          "name": "panel_3",
+          "type": "visualization",
+          "id": "f9b6dae0-b399-11ea-a130-574592179c4c"
+        },
+        {
+          "name": "panel_4",
+          "type": "visualization",
+          "id": "f3a62970-b39a-11ea-a130-574592179c4c"
+        },
+        {
+          "name": "panel_5",
+          "type": "visualization",
+          "id": "44096c40-b3a7-11ea-a130-574592179c4c"
+        },
+        {
+          "name": "panel_6",
+          "type": "visualization",
+          "id": "ea409190-b3a4-11ea-a130-574592179c4c"
+        },
+        {
+          "name": "panel_7",
+          "type": "visualization",
+          "id": "2bc4d920-b3a8-11ea-a130-574592179c4c"
+        }
+      ],
+      "migrationVersion": {
+        "dashboard": "7.3.0"
+      }
+    },
+    {
+      "id": "d2d2c480-b3a7-11ea-a130-574592179c4c",
+      "type": "visualization",
+      "updated_at": "2020-06-21T10:13:16.616Z",
+      "version": "WzI4NiwxXQ==",
+      "attributes": {
+        "title": "description",
+        "visState": "{\"type\":\"metric\",\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"description_wheater\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"@timestamp\",\"sortOrder\":\"desc\"}}],\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"title\":\"description\"}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\",\"filter\":[]}"
+        }
+      },
+      "references": [
+        {
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern",
+          "id": "12acabb0-b390-11ea-a130-574592179c4c"
+        }
+      ],
+      "migrationVersion": {
+        "visualization": "7.8.0"
+      }
+    },
+    {
+      "id": "e1114df0-b398-11ea-a130-574592179c4c",
+      "type": "visualization",
+      "updated_at": "2020-06-21T09:55:56.524Z",
+      "version": "WzIxOCwxXQ==",
+      "attributes": {
+        "title": "currently_temp",
+        "visState": "{\"type\":\"metric\",\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"temp\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"@timestamp\",\"sortOrder\":\"desc\"}}],\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"title\":\"currently_temp\"}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\",\"filter\":[]}"
+        }
+      },
+      "references": [
+        {
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern",
+          "id": "12acabb0-b390-11ea-a130-574592179c4c"
+        }
+      ],
+      "migrationVersion": {
+        "visualization": "7.8.0"
+      }
+    },
+    {
+      "id": "c9025350-b3a5-11ea-a130-574592179c4c",
+      "type": "visualization",
+      "updated_at": "2020-06-21T09:58:41.157Z",
+      "version": "WzIyNywxXQ==",
+      "attributes": {
+        "title": "feels_like",
+        "visState": "{\"type\":\"metric\",\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"feels_like\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"@timestamp\",\"sortOrder\":\"desc\"}}],\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"title\":\"feels_like\"}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\",\"filter\":[]}"
+        }
+      },
+      "references": [
+        {
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern",
+          "id": "12acabb0-b390-11ea-a130-574592179c4c"
+        }
+      ],
+      "migrationVersion": {
+        "visualization": "7.8.0"
+      }
+    },
+    {
+      "id": "f9b6dae0-b399-11ea-a130-574592179c4c",
+      "type": "visualization",
+      "updated_at": "2020-06-21T08:40:04.967Z",
+      "version": "WzkwLDFd",
+      "attributes": {
+        "title": "temp_min",
+        "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"aggregate\":\"concat\",\"field\":\"temp_min\",\"size\":1,\"sortField\":\"@timestamp\",\"sortOrder\":\"desc\"},\"schema\":\"metric\",\"type\":\"top_hits\"}],\"params\":{\"addLegend\":false,\"addTooltip\":true,\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"None\",\"percentageMode\":false,\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"title\":\"temp_min\",\"type\":\"metric\"}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\",\"filter\":[]}"
+        }
+      },
+      "references": [
+        {
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern",
+          "id": "12acabb0-b390-11ea-a130-574592179c4c"
+        }
+      ],
+      "migrationVersion": {
+        "visualization": "7.8.0"
+      }
+    },
+    {
+      "id": "f3a62970-b39a-11ea-a130-574592179c4c",
+      "type": "visualization",
+      "updated_at": "2020-06-21T08:47:01.636Z",
+      "version": "WzEwMiwxXQ==",
+      "attributes": {
+        "title": "temp_max",
+        "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{\"aggregate\":\"concat\",\"field\":\"temp_max\",\"size\":1,\"sortField\":\"@timestamp\",\"sortOrder\":\"desc\"},\"schema\":\"metric\",\"type\":\"top_hits\"}],\"params\":{\"addLegend\":false,\"addTooltip\":true,\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"None\",\"percentageMode\":false,\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"title\":\"temp_max\",\"type\":\"metric\"}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\",\"filter\":[]}"
+        }
+      },
+      "references": [
+        {
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern",
+          "id": "12acabb0-b390-11ea-a130-574592179c4c"
+        }
+      ],
+      "migrationVersion": {
+        "visualization": "7.8.0"
+      }
+    },
+    {
+      "id": "44096c40-b3a7-11ea-a130-574592179c4c",
+      "type": "visualization",
+      "updated_at": "2020-06-21T10:09:17.059Z",
+      "version": "WzI3MywxXQ==",
+      "attributes": {
+        "title": "humidity",
+        "visState": "{\"type\":\"gauge\",\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"humidity\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"@timestamp\",\"sortOrder\":\"desc\"}}],\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":true,\"isDisplayWarning\":false,\"gauge\":{\"alignment\":\"automatic\",\"extendRange\":true,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":50},{\"from\":50,\"to\":75},{\"from\":75,\"to\":100}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"rgba(105,112,125,0.2)\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"rgba(105,112,125,0.2)\",\"bgColor\":true,\"subText\":\"\",\"fontSize\":60}}},\"title\":\"humidity\"}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\",\"filter\":[]}"
+        }
+      },
+      "references": [
+        {
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern",
+          "id": "12acabb0-b390-11ea-a130-574592179c4c"
+        }
+      ],
+      "migrationVersion": {
+        "visualization": "7.8.0"
+      }
+    },
+    {
+      "id": "ea409190-b3a4-11ea-a130-574592179c4c",
+      "type": "visualization",
+      "updated_at": "2020-06-21T09:52:27.433Z",
+      "version": "WzIxMCwxXQ==",
+      "attributes": {
+        "title": "wind_speed",
+        "visState": "{\"type\":\"gauge\",\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"wind_speed\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"@timestamp\",\"sortOrder\":\"desc\"}}],\"params\":{\"type\":\"gauge\",\"addTooltip\":true,\"addLegend\":true,\"isDisplayWarning\":false,\"gauge\":{\"alignment\":\"automatic\",\"extendRange\":true,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"Labels\",\"colorsRange\":[{\"from\":0,\"to\":50},{\"from\":50,\"to\":75},{\"from\":75,\"to\":100}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"rgba(105,112,125,0.2)\"},\"type\":\"meter\",\"style\":{\"bgWidth\":0.9,\"width\":0.9,\"mask\":false,\"bgMask\":false,\"maskBars\":50,\"bgFill\":\"rgba(105,112,125,0.2)\",\"bgColor\":true,\"subText\":\"\",\"fontSize\":60}}},\"title\":\"wind_speed\"}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\",\"filter\":[]}"
+        }
+      },
+      "references": [
+        {
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern",
+          "id": "12acabb0-b390-11ea-a130-574592179c4c"
+        }
+      ],
+      "migrationVersion": {
+        "visualization": "7.8.0"
+      }
+    },
+    {
+      "id": "2bc4d920-b3a8-11ea-a130-574592179c4c",
+      "type": "visualization",
+      "updated_at": "2020-06-21T10:15:45.842Z",
+      "version": "WzI4OSwxXQ==",
+      "attributes": {
+        "title": "wind_deg",
+        "visState": "{\"type\":\"metric\",\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"wind_deg\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"@timestamp\",\"sortOrder\":\"desc\"}}],\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"title\":\"wind_deg\"}",
+        "uiStateJSON": "{}",
+        "description": "",
+        "version": 1,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\",\"filter\":[]}"
+        }
+      },
+      "references": [
+        {
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern",
+          "id": "12acabb0-b390-11ea-a130-574592179c4c"
+        }
+      ],
+      "migrationVersion": {
+        "visualization": "7.8.0"
+      }
+    },
+    {
+      "id": "12acabb0-b390-11ea-a130-574592179c4c",
+      "type": "index-pattern",
+      "updated_at": "2020-06-21T10:08:18.345Z",
+      "version": "WzI3MSwxXQ==",
+      "attributes": {
+        "title": "weather-*",
+        "timeFieldName": "@timestamp",
+        "fields": "[{\"name\":\"@timestamp\",\"type\":\"date\",\"esTypes\":[\"date\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"@version\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"@version.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"@version\"}}},{\"name\":\"_id\",\"type\":\"string\",\"esTypes\":[\"_id\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_index\",\"type\":\"string\",\"esTypes\":[\"_index\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"_score\",\"type\":\"number\",\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_source\",\"type\":\"_source\",\"esTypes\":[\"_source\"],\"count\":0,\"scripted\":false,\"searchable\":false,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"_type\",\"type\":\"string\",\"esTypes\":[\"_type\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":false},{\"name\":\"city\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"city.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"city\"}}},{\"name\":\"description_wheater\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"description_wheater.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"description_wheater\"}}},{\"name\":\"feels_like\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"feels_like.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"feels_like\"}}},{\"name\":\"humidity\",\"type\":\"number\",\"esTypes\":[\"float\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.clouds.all\",\"type\":\"number\",\"esTypes\":[\"long\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.coord.lat\",\"type\":\"number\",\"esTypes\":[\"float\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.coord.lon\",\"type\":\"number\",\"esTypes\":[\"float\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.dt\",\"type\":\"number\",\"esTypes\":[\"long\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.id\",\"type\":\"number\",\"esTypes\":[\"long\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.main.feels_like\",\"type\":\"number\",\"esTypes\":[\"float\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.main.humidity\",\"type\":\"number\",\"esTypes\":[\"long\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.main.pressure\",\"type\":\"number\",\"esTypes\":[\"long\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.main.temp\",\"type\":\"number\",\"esTypes\":[\"float\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.main.temp_max\",\"type\":\"number\",\"esTypes\":[\"long\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.main.temp_min\",\"type\":\"number\",\"esTypes\":[\"float\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.name\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"list.name.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"list.name\"}}},{\"name\":\"list.sys.country\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"list.sys.country.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"list.sys.country\"}}},{\"name\":\"list.weather.description\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"list.weather.description.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"list.weather.description\"}}},{\"name\":\"list.weather.icon\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"list.weather.icon.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"list.weather.icon\"}}},{\"name\":\"list.weather.id\",\"type\":\"number\",\"esTypes\":[\"long\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.weather.main\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"list.weather.main.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"list.weather.main\"}}},{\"name\":\"list.wind.deg\",\"type\":\"number\",\"esTypes\":[\"long\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"list.wind.speed\",\"type\":\"number\",\"esTypes\":[\"float\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true},{\"name\":\"pressure\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"pressure.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"pressure\"}}},{\"name\":\"temp\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"temp.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"temp\"}}},{\"name\":\"temp_max\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"temp_max.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"temp_max\"}}},{\"name\":\"temp_min\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"temp_min.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"temp_min\"}}},{\"name\":\"url_icon_weather\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"url_icon_weather.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"url_icon_weather\"}}},{\"name\":\"wind_deg\",\"type\":\"string\",\"esTypes\":[\"text\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":false,\"readFromDocValues\":false},{\"name\":\"wind_deg.keyword\",\"type\":\"string\",\"esTypes\":[\"keyword\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true,\"subType\":{\"multi\":{\"parent\":\"wind_deg\"}}},{\"name\":\"wind_speed\",\"type\":\"number\",\"esTypes\":[\"float\"],\"count\":0,\"scripted\":false,\"searchable\":true,\"aggregatable\":true,\"readFromDocValues\":true}]"
+      },
+      "references": [],
+      "migrationVersion": {
+        "index-pattern": "7.6.0"
+      }
+    }
+  ]
+}

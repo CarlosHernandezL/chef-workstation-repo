@@ -1,0 +1,51 @@
+input {
+  http_poller {
+    urls => {
+      url => "http://api.openweathermap.org/data/2.5/find?lat=19.42&lon=-99.1269&cnt=1&APPID=${API_KEY}&units=metric&lang=sp"
+    }
+    request_timeout => 60
+    schedule => { every => "5m"}
+    codec => "json"
+    metadata_target => "http_poller_metadata"
+  }
+}
+
+filter {
+  date {
+    match => [ "[list][0][dt]", "UNIX" ]
+  }
+
+  mutate {
+    add_field => {
+      "city" => "%{[list][0][name]}"
+      "url_icon_weather" => "http://openweathermap.org/img/wn/%{[list][0][weather][0][icon]}@2x.png"
+      "description_wheater" => "%{[list][0][weather][0][description]}"
+      "humidity" => "%{[list][0][main][humidity]}"
+      "temp" => "%{[list][0][main][temp]}"
+      "pressure" => "%{[list][0][main][pressure]}"
+      "temp_min" => "%{[list][0][main][temp_min]}"
+      "feels_like" => "%{[list][0][main][feels_like]}"
+      "temp_max" => "%{[list][0][main][temp_max]}"
+      "wind_speed" => "%{[list][0][wind][speed]}"
+      "wind_deg" => "%{[list][0][wind][deg]}"
+    }
+  }
+
+  mutate {
+    convert => {
+      "wind_speed" => "float"
+      "humidity" => "float"
+    }
+  }
+
+  mutate {
+    remove_field => [ "http_poller_metadata", "message", "count", "cod" ]
+  }
+}
+
+output {
+  elasticsearch {
+    hosts => "http://localhost:9200"
+    index => "weather-%{+YYYY.MM}"
+  }
+}
