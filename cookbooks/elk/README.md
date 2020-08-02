@@ -1,6 +1,6 @@
 # Setting Up ELK Stack (Elasticsearch - Logstash - Kibana)
 
-This cookbook is able to install elasticsearch and kibana through reverse proxy based on NGINX, also install and configure logstash with a pipeline that retrieve data from wheather API and  these store on elasticsearch node, these data will show through of kibana dashboard that is setting up through of the cookbook as well. Is important that the server where will be deployed this cookbook has at least 3 GB RAM and 2 CPU´s.
+This cookbook is able to install elasticsearch and kibana through reverse proxy based on NGINX, also install and configure logstash with a pipeline that retrieve data from wheather API and  these store on elasticsearch node, these data will show through of kibana dashboard that is setting up through of the cookbook as well. Is important that the server where will be deployed this cookbook has at least 3 GB RAM and 2 CPU´s on Centos 7.
 
 # Pre-requirements
 
